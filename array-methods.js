@@ -29,3 +29,26 @@ const sum = num.reduce((acc, curr, i, arr) => {
 
 console.log(sum)
 // 10
+
+// ---------------------------------------------------
+
+// Diff b/w map & forEach
+
+const arr = [1, 2, 3, 4]
+
+const mapResult = arr.map((ar) => {
+    return ar + 2
+})
+
+const forEachResult = arr.forEach((ar) => {
+    return ar + 2
+})
+// Instead...
+const forEachResultOg = arr.forEach((ar, i) => {
+    arr[i] = ar + 2
+})
+
+console.log(mapResult, forEachResult, arr)
+// [ 3, 4, 5, 6 ] undefined [ 3, 4, 5, 6 ]
+
+//As forEach is not an array function we cannot chain other array functions to it
