@@ -66,3 +66,10 @@ const fun = (a, ...number, x, y) => {
 fun(5, 6, 7, 8) //error
 
 // --------------------------------
+
+// What is callback function?
+// A function passed into another function as an argument is called callback function
+
+document.getElementById("btn").addEventListener("click", function(){ // callback function
+    console.log("Button Clicked")
+})

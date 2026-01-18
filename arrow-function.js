@@ -28,5 +28,17 @@ const fn = () => {
 fn(1,2,3)
 
 // 4 - "this" keyword
-
+// this inside a arrow function point to global object
+ let user = {
+     username: "Kanak King",
+     rc1: () => {
+         console.log("Subscribe to " + this.username)
+     },
+     rc2(){
+         console.log("Subscribe to " + this.username)
+     }
+ }
+ 
+ user.rc1() // Subscribe to undefined
+ user.rc2() // Subscribe to Kanak King
 
