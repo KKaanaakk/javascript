@@ -36,3 +36,33 @@ displaySquare(square)
     return num*num
 })(5)
 
+// --------------------------------
+
+
+// Params vs Arguments
+
+function square(num){ // Params
+    console.log(num * num)
+}
+square(5) //Arguments
+
+// --------------------------------
+
+// Rest vs Arguments
+
+function multiply(...nums){ // rest
+    console.log(nums[0] * nums[1])
+}
+var arr = [5, 6]
+
+multiply(...arr) //Spread
+
+// --------------------------------
+
+// Rest parameter must be the last formal parameter
+const fun = (a, ...number, x, y) => { 
+    console.log(x, y)
+}
+fun(5, 6, 7, 8) //error
+
+// --------------------------------
